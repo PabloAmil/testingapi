@@ -1,0 +1,26 @@
+GET http://localhost:3000/ 
+
+### 
+GET http://localhost:3000/api/movies/byGenre/drama
+
+
+###
+
+GET http://localhost:3000/api/movies/byGenre/horror
+
+
+###
+
+GET http://localhost:3000/api/movies/byGenre/action
+
+###
+
+POST http://localhost:3000/ 
+Content-Type: application/json
+
+{
+    "id": 7,
+    "name": "La tumba de las luciernagas",
+    "genre": "drama",
+    "img": "new URL('https://m.media-amazon.com/images/I/51VdvZEHzBL.__AC_SX300_SY300_QL70_ML2_.jpg')"
+}

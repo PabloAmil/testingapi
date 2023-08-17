@@ -1,0 +1,91 @@
+ * {
+  padding: auto;
+  margin: auto;
+  box-sizing: border-box;
+ }
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card-displayer {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  padding: 1.5em;
+  margin-top: 2.5em;
+}
+
+.movie-container {
+
+  padding-top: 10em;
+  height: 100vh;
+  background-color: #0f1438;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-button {
+  background-color: #161e53;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  height: 2.5em;
+  position: relative;
+  cursor: pointer;
+} 
+
+.options {
+ 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  background-color: #0f1333;
+  z-index: 10;
+  transition: .3s;
+}
+
+.category-button:hover {
+  background-color: #0f1333;
+  color: #dad4d4;
+}
+
+.category-button button {
+  display: none;
+}
+
+.category-button:hover .options {
+  height: 100px;
+  display: block;
+}
+
+.header {
+  display: flex;
+  background-color: #161e53;
+  color: #fff;
+  height: 2.5em;
+}
+
+
+
+
+
