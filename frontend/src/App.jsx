@@ -21,7 +21,7 @@ function App() {
     if (currentGenre !== 'all') {
       endpoint = `http://localhost:3000/api/movies/byGenre/${currentGenre}`;
     }
- 
+
     fetch(endpoint)
       .then(response => response.json())
       .then(data => {
@@ -30,17 +30,17 @@ function App() {
             return movie.name.toLowerCase().includes(searchName.toLowerCase())
           })
           setMovies(filteredMovies);
-        } 
+        }
         else {
           setMovies(data);
         }
       })
       .catch(error => console.error('Error fetching movies:', error));
-    }, [currentGenre, searchName]);
-    
-    function manageClick(str){
-      return setCurrentGenre(str);
-    }
+  }, [currentGenre, searchName]);
+
+  function manageClick(str) {
+    return setCurrentGenre(str);
+  }
 
 
   return (
@@ -49,10 +49,10 @@ function App() {
         <div>
           <button className='category-button'>Search by Category</button>
           <div className='options'>
-            <button onClick={()=>{ manageClick('all')}}>All</button>
-            <button onClick={()=>{ manageClick('horror')}}>Horror</button>
-            <button onClick={()=>{ manageClick('drama')}}>Drama</button>
-            <button onClick={()=>{ manageClick('action')}}>Action</button>
+            <button onClick={() => { manageClick('all') }}>All</button>
+            <button onClick={() => { manageClick('horror') }}>Horror</button>
+            <button onClick={() => { manageClick('drama') }}>Drama</button>
+            <button onClick={() => { manageClick('action') }}>Action</button>
           </div>
         </div>
         <div className='search-bar'>
@@ -63,7 +63,7 @@ function App() {
         <div className='card-displayer'>
           {
             movies.map((movie) => (
-              <Card key={movie.id} movie={movie}/>
+              <Card key={movie.id} movie={movie} />
             ))
           }
         </div>
